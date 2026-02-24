@@ -6,7 +6,7 @@
 /*   By: alejandj <alejandj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/23 12:40:03 by alejandj          #+#    #+#             */
-/*   Updated: 2026/02/24 20:00:27 by alejandj         ###   ########.fr       */
+/*   Updated: 2026/02/24 22:17:12 by alejandj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ int main(int argc, char **argv)
 	std::string s1 = argv[2];
 	std::string s2 = argv[3];
 	
-	if (filename.empty() || s1.empty() || s2.empty())
+	if (filename.empty() || s1.empty())
 	{
 		std::cerr << BOLD << RED << "Error: Arguments cannot be empty" << RESET << std::endl;
 		return (1);
