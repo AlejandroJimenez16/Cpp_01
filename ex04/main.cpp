@@ -6,7 +6,7 @@
 /*   By: alejandj <alejandj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/23 12:40:03 by alejandj          #+#    #+#             */
-/*   Updated: 2026/02/24 19:51:12 by alejandj         ###   ########.fr       */
+/*   Updated: 2026/02/24 20:00:27 by alejandj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,14 +49,14 @@ int main(int argc, char **argv)
 	
 	if (filename.empty() || s1.empty() || s2.empty())
 	{
-		std::cerr << BOLD << RED << "Error: arguments cannot be empty" << RESET << std::endl;
+		std::cerr << BOLD << RED << "Error: Arguments cannot be empty" << RESET << std::endl;
 		return (1);
 	}
 
 	std::ifstream infile(filename);
 	if (!infile.is_open())
 	{
-		std::cerr << BOLD << RED << "Error: could not open file '" << filename << "'" << RESET << std::endl;
+		std::cerr << BOLD << RED << "Error: Could not open file '" << filename << "'" << RESET << std::endl;
 		return (1);
 	}
 
@@ -64,7 +64,7 @@ int main(int argc, char **argv)
 	std::ofstream outfile(outfileName);
 	if (!outfile.is_open())
 	{
-		std::cerr << BOLD << RED << "Error: could not create file '" << outfileName << "'" << RESET << std::endl;
+		std::cerr << BOLD << RED << "Error: Could not create file '" << outfileName << "'" << RESET << std::endl;
 		return (1);
 	}
 
