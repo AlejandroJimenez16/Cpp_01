@@ -6,7 +6,7 @@
 /*   By: alejandj <alejandj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/20 20:35:04 by alejandj          #+#    #+#             */
-/*   Updated: 2026/02/21 19:01:03 by alejandj         ###   ########.fr       */
+/*   Updated: 2026/02/26 19:44:59 by alejandj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class HumanA
 
     public:
 		HumanA(std::string name, Weapon& weapon);
+        ~HumanA();
         void attack();
 };
 

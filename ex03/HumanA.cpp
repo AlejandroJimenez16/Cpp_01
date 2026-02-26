@@ -6,7 +6,7 @@
 /*   By: alejandj <alejandj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/20 20:46:54 by alejandj          #+#    #+#             */
-/*   Updated: 2026/02/21 19:01:22 by alejandj         ###   ########.fr       */
+/*   Updated: 2026/02/26 19:45:15 by alejandj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ HumanA::HumanA(std::string name, Weapon& weapon)
 {
 	this->name = name;
 }
+
+HumanA::~HumanA() {}
 
 void HumanA::attack()
 {

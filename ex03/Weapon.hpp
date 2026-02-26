@@ -6,7 +6,7 @@
 /*   By: alejandj <alejandj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/20 19:59:54 by alejandj          #+#    #+#             */
-/*   Updated: 2026/02/21 19:00:24 by alejandj         ###   ########.fr       */
+/*   Updated: 2026/02/26 19:47:09 by alejandj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class Weapon
 	
 	public:
 		Weapon(std::string type);
+		~Weapon();
 		const std::string& getType() const;
 		void setType(std::string type);
 };
