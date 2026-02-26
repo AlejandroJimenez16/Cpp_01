@@ -6,15 +6,13 @@
 /*   By: alejandj <alejandj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/23 12:40:03 by alejandj          #+#    #+#             */
-/*   Updated: 2026/02/24 22:17:12 by alejandj         ###   ########.fr       */
+/*   Updated: 2026/02/26 21:22:42 by alejandj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <string>
 #include <fstream>
-
-#include "colors.hpp"
 
 std::string replaceString(std::string line, std::string s1, std::string s2)
 {
@@ -38,8 +36,8 @@ int main(int argc, char **argv)
 {
 	if (argc != 4)
 	{
-		std::cerr << BOLD << RED << "Error: Invalid arguments" << RESET << std::endl;
-		std::cerr << BOLD << YELLOW << "Args format: ./sedIsForLosers <filename> <s1> <s2>" << RESET << std::endl;
+		std::cerr << "\033[1m\033[31mError: Invalid arguments\033[0m" << std::endl;
+		std::cerr << "\033[1m\033[33mArgs format: ./sedIsForLosers <filename> <s1> <s2>\033[0m" << std::endl;
 		return (1);
 	}
 	
@@ -49,14 +47,14 @@ int main(int argc, char **argv)
 	
 	if (filename.empty() || s1.empty())
 	{
-		std::cerr << BOLD << RED << "Error: Arguments cannot be empty" << RESET << std::endl;
+		std::cerr << "\033[1m\033[31mError: Arguments cannot be empty\033[0m" << std::endl;
 		return (1);
 	}
 
 	std::ifstream infile(filename);
 	if (!infile.is_open())
 	{
-		std::cerr << BOLD << RED << "Error: Could not open file '" << filename << "'" << RESET << std::endl;
+		std::cerr << "\033[1m\033[31mError: Could not open file '" << filename << "'\033[0m" << std::endl;
 		return (1);
 	}
 
@@ -64,7 +62,7 @@ int main(int argc, char **argv)
 	std::ofstream outfile(outfileName);
 	if (!outfile.is_open())
 	{
-		std::cerr << BOLD << RED << "Error: Could not create file '" << outfileName << "'" << RESET << std::endl;
+		std::cerr << "\033[1m\033[31mError: Could not create file '" << outfileName << "'\033[0m" << std::endl;
 		return (1);
 	}
 

@@ -6,7 +6,7 @@
 #    By: alejandj <alejandj@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/02/23 12:51:14 by alejandj          #+#    #+#              #
-#    Updated: 2026/02/23 12:51:59 by alejandj         ###   ########.fr        #
+#    Updated: 2026/02/26 21:23:59 by alejandj         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,8 +18,6 @@ CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 SRC =	main.cpp		\
 
 OBJECTS = $(SRC:.cpp=.o)
-
-HEADERS =	colors.hpp	\
 
 all: $(NAME)
 
@@ -36,7 +34,7 @@ $(NAME): $(OBJECTS)
 	@echo "✅ \033[0;32mCPP COMPILAD0!!!\033[0m"
 	@echo ""
 
-%.o: %.cpp $(HEADERS)
+%.o: %.cpp
 	$(CXX) $(CFLAGS) -c $< -o $@
 
 # ---------------------------------------------------------------------------- #
