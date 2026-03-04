@@ -2,7 +2,7 @@
 
 ## Objective
 
-The goal of `CPP Module 01` is to introduce memory allocation (stack vs heap), 
+The goal of `CPP Module 01` is to introduce memory allocation (stack vs heap),
 pointers and references, pointer to member functions, and the use of the switch statement in C++.
 
 ## Project structure
@@ -33,7 +33,7 @@ This exercise consists of a program that demonstrates the difference between sta
 
 **Program functionality:**
 - Create Zombie objects on the stack and on the heap
-- Call a function to make each Zombie “announce” itself
+- Call a function to make each Zombie "announce" itself
 - Properly delete heap-allocated Zombies
 - Observe object lifetimes as Zombies “die” after going out of scope or being deleted
 
@@ -48,8 +48,8 @@ This exercise consists of a program that demonstrates the difference between sta
 - `void announce(void)`
 
 *Functions:*
-- `Zombie* newZombie(std::string name)`: Creates a Zombie on the **heap** and returns a pointer.
-- `void randomChump(std::string name)`: Creates a Zombie on the **stack** and immediately announces it.
+- `Zombie* newZombie(std::string name)`: Creates a Zombie on the **heap** and returns a pointer
+- `void randomChump(std::string name)`: Creates a Zombie on the **stack** and immediately announces it
 
 **Example usage:**
 
@@ -90,7 +90,7 @@ This exercise consists of creating and managing multiple Zombie objects using dy
 - `void announce(void)`
 
 *Functions:*
-- `Zombie* zombieHorde(int N, std::string name)`: Creates a dynamically allocated array of Zombies on the heap using `new[]`, initializes each element with the given name, and returns a pointer to the first element.
+- `Zombie* zombieHorde(int N, std::string name)`: Creates a dynamically allocated array of Zombies on the heap using `new[]`, initializes each element with the given name, and returns a pointer to the first element
 
 **Example usage:**
 
@@ -241,7 +241,7 @@ bye42
 This exercise consists of implementing the Harl class with multiple complaints using pointers to member functions.
 
 **What you will learn:**
-- How to define and use **pointers to member functions** in C++  
+- How to define and use **pointers to member functions** in C++
 - How to store member function pointers in an array and map them to string keys
 
 **Program functionality:**
@@ -289,7 +289,7 @@ This exercise consists of filtering Harl’s complaints using a switch statement
 - Implement complaint methods (`debug`, `info`, `warning`, `error`) inside Harl
 - Call the appropriate method dynamically based on a string input
 - Use a switch statement to determine which method(s) to execute
-- Execute **all levels equal or higher** than the specified one (fall-through behavior) 
+- Execute **all levels equal or higher** than the specified one (fall-through behavior)
 - Handle unmatched input with a default message
 
 **Class design:**
