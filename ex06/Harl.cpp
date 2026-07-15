@@ -6,7 +6,7 @@
 /*   By: alejandj <alejandj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/25 17:34:35 by alejandj          #+#    #+#             */
-/*   Updated: 2026/02/26 22:57:15 by alejandj         ###   ########.fr       */
+/*   Updated: 2026/07/15 20:08:45 by alejandj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,10 +63,13 @@ void Harl::complain(std::string level)
         	{
 				case 0:
 					(this->*functions[0])();
+					/* fallthrough */
 				case 1:
 					(this->*functions[1])();
+					/* fallthrough */
 				case 2:
 					(this->*functions[2])();
+					/* fallthrough */
 				case 3:
 					(this->*functions[3])();
 					break;

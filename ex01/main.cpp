@@ -6,11 +6,12 @@
 /*   By: alejandj <alejandj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/19 12:24:41 by alejandj          #+#    #+#             */
-/*   Updated: 2026/02/19 13:02:16 by alejandj         ###   ########.fr       */
+/*   Updated: 2026/07/15 17:46:48 by alejandj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
+#include <sstream>
 
 int main(int argc, char **argv)
 {
@@ -24,8 +25,9 @@ int main(int argc, char **argv)
 		return (1);
 	}
 
-	num_zombies = std::atoi(argv[1]);
-	if (num_zombies <= 0)
+	std::istringstream iss(argv[1]);
+	iss >> num_zombies;
+	if (iss.fail() || num_zombies <= 0)
 		return (1);
 		
 	Zombie* horde = zombieHorde(num_zombies, argv[2]);

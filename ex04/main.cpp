@@ -6,7 +6,7 @@
 /*   By: alejandj <alejandj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/23 12:40:03 by alejandj          #+#    #+#             */
-/*   Updated: 2026/02/26 21:22:42 by alejandj         ###   ########.fr       */
+/*   Updated: 2026/07/15 18:11:28 by alejandj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int main(int argc, char **argv)
 		return (1);
 	}
 
-	std::ifstream infile(filename);
+	std::ifstream infile(filename.c_str());
 	if (!infile.is_open())
 	{
 		std::cerr << "\033[1m\033[31mError: Could not open file '" << filename << "'\033[0m" << std::endl;
@@ -59,7 +59,7 @@ int main(int argc, char **argv)
 	}
 
 	std::string outfileName = filename + ".replace";
-	std::ofstream outfile(outfileName);
+	std::ofstream outfile(outfileName.c_str());
 	if (!outfile.is_open())
 	{
 		std::cerr << "\033[1m\033[31mError: Could not create file '" << outfileName << "'\033[0m" << std::endl;
